@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Түйіндеме - Баешов Рахат Тайыпханұлы</title>
+    <title>Баешов Рахат Тайыпханұлы - Жалпы практикалық дәрігер (ВОП)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,118 +13,181 @@
             margin: 0;
             padding: 0;
         }
-        @page {
-            size: A4 portrait;
-            margin: 0;
-        }
-        html, body {
-            height: 297mm;
-            max-height: 297mm;
-            overflow: hidden;
+        body {
             font-family: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background-color: #ffffff;
+            background-color: #0f172a;
             color: #1e293b;
-            line-height: 1.34;
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
+            line-height: 1.45;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-        .page {
-            width: 210mm;
-            height: 297mm;
-            max-height: 297mm;
-            margin: 0 auto;
+
+        /* TOP ACTION BAR */
+        .top-bar {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 14px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 18px;
+            border-radius: 8px;
+            font-size: 13.5px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+        }
+        .btn-primary {
+            background: #0d9488;
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(13, 148, 136, 0.4);
+        }
+        .btn-primary:hover {
+            background: #0f766e;
+            transform: translateY(-1px);
+        }
+        .btn-success {
+            background: #22c55e;
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(34, 197, 94, 0.35);
+        }
+        .btn-success:hover {
+            background: #16a34a;
+            transform: translateY(-1px);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* MAIN CONTAINER */
+        .site-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 30px 16px 50px 16px;
+        }
+        .resume-card {
+            width: 100%;
+            max-width: 960px;
             background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             display: grid;
-            grid-template-columns: 68mm 142mm;
-            position: relative;
+            grid-template-columns: 310px 1fr;
             overflow: hidden;
         }
-        
+
         /* SIDEBAR */
         .sidebar {
             background: #0d1e2e;
             color: #e2e8f0;
-            padding: 16px 14px;
+            padding: 30px 24px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 20px;
         }
         .photo-container {
             text-align: center;
         }
         .photo {
-            width: 110px;
-            height: 135px;
+            width: 140px;
+            height: 175px;
             object-fit: cover;
-            border-radius: 10px;
-            border: 2px solid #14b8a6;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border-radius: 12px;
+            border: 3px solid #14b8a6;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.4);
         }
         .sidebar-section {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 8px;
         }
         .sidebar-title {
-            font-size: 10.5px;
+            font-size: 11.5px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.8px;
             color: #2dd4bf;
             border-bottom: 1.5px solid rgba(45, 212, 191, 0.3);
-            padding-bottom: 2px;
+            padding-bottom: 4px;
         }
         .contact-list {
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            font-size: 9.5px;
+            gap: 8px;
+            font-size: 11px;
         }
         .contact-item {
             display: flex;
             align-items: flex-start;
-            gap: 6px;
+            gap: 8px;
             color: #cbd5e1;
             word-break: break-word;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a.contact-item:hover {
+            color: #2dd4bf;
         }
         .contact-icon {
             color: #2dd4bf;
-            font-size: 10.5px;
-            min-width: 12px;
+            font-size: 12px;
+            min-width: 15px;
             padding-top: 1px;
         }
         .badge-box {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(45, 212, 191, 0.25);
-            border-radius: 5px;
-            padding: 5px 8px;
+            border-radius: 8px;
+            padding: 10px 12px;
         }
         .badge-title {
-            font-size: 10px;
+            font-size: 11px;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 1px;
+            margin-bottom: 2px;
         }
         .badge-desc {
-            font-size: 9px;
+            font-size: 10px;
             color: #94a3b8;
-            line-height: 1.2;
+            line-height: 1.3;
         }
         .badge-score {
             display: inline-block;
             background: #0d9488;
             color: #ffffff;
             font-weight: 700;
-            font-size: 9.5px;
-            padding: 1px 5px;
-            border-radius: 3px;
-            margin-top: 2px;
+            font-size: 10.5px;
+            padding: 2px 7px;
+            border-radius: 4px;
+            margin-top: 4px;
         }
         .lang-list {
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            font-size: 9.5px;
+            gap: 6px;
+            font-size: 11px;
         }
         .lang-row {
             display: flex;
@@ -136,85 +199,86 @@
             color: #f1f5f9;
         }
         .lang-level {
-            font-size: 8.5px;
+            font-size: 9.5px;
             background: rgba(45, 212, 191, 0.15);
             color: #5eead4;
-            padding: 1px 4px;
-            border-radius: 3px;
+            padding: 2px 6px;
+            border-radius: 4px;
             font-weight: 600;
         }
         .tag-cloud {
             display: flex;
             flex-wrap: wrap;
-            gap: 3.5px;
+            gap: 5px;
         }
         .tag {
             background: rgba(255, 255, 255, 0.07);
             color: #e2e8f0;
-            font-size: 9px;
-            padding: 2px 5px;
-            border-radius: 3px;
+            font-size: 10px;
+            padding: 3px 8px;
+            border-radius: 4px;
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
         .qr-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px dashed rgba(45, 212, 191, 0.4);
-            border-radius: 6px;
-            padding: 6px;
+            border-radius: 8px;
+            padding: 10px;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 3px;
+            gap: 6px;
         }
         .qr-img {
-            width: 58px;
-            height: 58px;
-            border-radius: 4px;
+            width: 80px;
+            height: 80px;
+            border-radius: 6px;
             background: #ffffff;
-            padding: 2px;
+            padding: 3px;
         }
         .qr-text {
-            font-size: 8px;
+            font-size: 9px;
             color: #5eead4;
             font-weight: 600;
-            letter-spacing: 0.2px;
+            letter-spacing: 0.3px;
         }
 
         /* MAIN CONTENT */
         .main {
-            padding: 18px 18px 14px 18px;
+            padding: 34px 30px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 18px;
             background: #ffffff;
         }
         .header {
-            border-bottom: 1.5px solid #f1f5f9;
-            padding-bottom: 6px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 12px;
         }
         .name {
-            font-size: 20px;
+            font-size: 25px;
             font-weight: 800;
             color: #0f2438;
-            letter-spacing: -0.3px;
+            letter-spacing: -0.4px;
             line-height: 1.15;
             text-transform: uppercase;
         }
         .target-role {
-            font-size: 12.5px;
+            font-size: 14.5px;
             font-weight: 700;
             color: #0d9488;
-            margin-top: 2px;
+            margin-top: 4px;
             display: flex;
             align-items: center;
-            gap: 7px;
+            gap: 10px;
+            flex-wrap: wrap;
         }
         .role-tag {
-            font-size: 9px;
+            font-size: 10px;
             background: #ccfbf1;
             color: #0f766e;
-            padding: 1px 6px;
+            padding: 2px 8px;
             border-radius: 999px;
             font-weight: 700;
             letter-spacing: 0.2px;
@@ -222,48 +286,48 @@
         .section {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 8px;
         }
         .section-header {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
         .section-icon {
-            width: 17px;
-            height: 17px;
+            width: 22px;
+            height: 22px;
             background: #e6fffa;
             color: #0d9488;
-            border-radius: 4px;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 9.5px;
+            font-size: 12px;
             font-weight: 800;
         }
         .section-title {
-            font-size: 11px;
+            font-size: 12.5px;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.6px;
             color: #0f2438;
         }
         .summary-text {
-            font-size: 9.5px;
+            font-size: 11.5px;
             color: #334155;
-            line-height: 1.42;
+            line-height: 1.5;
             background: #f8fafc;
             border-left: 3px solid #0d9488;
-            padding: 5px 9px;
-            border-radius: 0 5px 5px 0;
+            padding: 10px 14px;
+            border-radius: 0 6px 6px 0;
             text-align: justify;
         }
         .timeline-item {
             position: relative;
-            padding-left: 11px;
+            padding-left: 14px;
             border-left: 2px solid #e2e8f0;
             margin-left: 3px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
         .timeline-item:last-child {
             margin-bottom: 0;
@@ -271,10 +335,10 @@
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -4.5px;
-            top: 4px;
-            width: 7px;
-            height: 7px;
+            left: -5px;
+            top: 5px;
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
             background: #0d9488;
             border: 1.5px solid #ffffff;
@@ -283,63 +347,65 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
+            flex-wrap: wrap;
+            gap: 6px;
         }
         .item-title {
-            font-size: 10px;
+            font-size: 11.5px;
             font-weight: 700;
             color: #0f2438;
         }
         .item-period {
-            font-size: 9px;
+            font-size: 10px;
             color: #64748b;
             font-weight: 600;
         }
         .item-subtitle {
-            font-size: 9.5px;
+            font-size: 11px;
             color: #0d9488;
             font-weight: 600;
             margin-top: 1px;
         }
         .item-bullets {
-            margin-top: 2px;
-            padding-left: 11px;
-            font-size: 9px;
+            margin-top: 4px;
+            padding-left: 14px;
+            font-size: 10.5px;
             color: #475569;
-            line-height: 1.38;
+            line-height: 1.45;
         }
         .item-bullets li {
-            margin-bottom: 1px;
+            margin-bottom: 2px;
         }
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5px;
+            gap: 8px;
         }
         .skill-card {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            border-radius: 5px;
-            padding: 5px 7px;
+            border-radius: 6px;
+            padding: 8px 10px;
         }
         .skill-card-title {
-            font-size: 9.5px;
+            font-size: 11px;
             font-weight: 700;
             color: #0f766e;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
             display: flex;
             align-items: center;
-            gap: 3px;
+            gap: 5px;
         }
         .skill-card-list {
             list-style: none;
-            font-size: 8.5px;
+            font-size: 10px;
             color: #334155;
-            line-height: 1.32;
+            line-height: 1.45;
         }
         .skill-card-list li {
             position: relative;
-            padding-left: 7px;
-            margin-bottom: 1px;
+            padding-left: 10px;
+            margin-bottom: 2px;
         }
         .skill-card-list li::before {
             content: '•';
@@ -348,210 +414,263 @@
             color: #0d9488;
             font-weight: bold;
         }
+
+        /* RESPONSIVE MOBILE */
+        @media (max-width: 768px) {
+            .site-container {
+                padding: 12px 10px;
+            }
+            .resume-card {
+                grid-template-columns: 1fr;
+                border-radius: 12px;
+            }
+            .sidebar {
+                padding: 24px 18px;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .main {
+                padding: 24px 18px;
+            }
+            .name {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body>
 
-<div class="page">
-    <!-- LEFT SIDEBAR -->
-    <div class="sidebar">
-        <div class="photo-container">
-            <img class="photo" src="photo.png" alt="Баешов Рахат">
-        </div>
+<!-- TOP ACTION BAR -->
+<div class="top-bar">
+    <a href="Rahat_Baeshov_CV.pdf" download class="btn btn-primary">
+        📥 PDF Резюмені жүктеп алу
+    </a>
+    <a href="https://wa.me/77075263980?text=%D0%A1%D3%99%D0%BB%D0%B5%D0%BC%D0%B5%D1%82%D1%81%D1%96%D0%B7%20%D0%B1%D0%B5%2C%20%D0%A0%D0%B0%D1%85%D0%B0%D1%82!%20%D0%A1%D1%96%D0%B7%D0%B4%D1%96%D2%A3%20%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%D2%A3%D1%96%D0%B7%20%D0%B1%D0%BE%D0%B9%D1%8B%D0%BD%D1%88%D0%B0%20%D1%85%D0%B0%D0%B1%D0%B0%D1%80%D0%BB%D0%B0%D1%81%D1%8B%D0%BF%20%D1%82%D1%83%D1%80%D0%BC%D1%8B%D0%BD." target="_blank" class="btn btn-success">
+        💬 WhatsApp-қа жазу
+    </a>
+    <a href="tel:+77075263980" class="btn btn-secondary">
+        📞 Қоңырау шалу
+    </a>
+    <button onclick="window.print()" class="btn btn-secondary">
+        🖨️ Басып шығару
+    </button>
+</div>
 
-        <div class="sidebar-section">
-            <div class="sidebar-title">Байланыс мәліметтері</div>
-            <div class="contact-list">
-                <div class="contact-item">
-                    <span class="contact-icon">📍</span>
-                    <span>Түркістан қ., Алмалы к-сі, 126</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">📞</span>
-                    <span>+7 (707) 526-39-80</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">✉️</span>
-                    <span>rbaeshov000@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">🎂</span>
-                    <span>26.01.2003 ж.т.</span>
-                </div>
+<!-- CENTERED RESUME CARD -->
+<div class="site-container">
+    <div class="resume-card">
+        <!-- LEFT SIDEBAR -->
+        <div class="sidebar">
+            <div class="photo-container">
+                <img class="photo" src="photo.png" alt="Баешов Рахат">
             </div>
-        </div>
 
-        <div class="sidebar-section">
-            <div class="sidebar-title">Сертификат & Бағалау</div>
-            <div class="badge-box">
-                <div class="badge-title">Маман сертификаты</div>
-                <div class="badge-desc">Клиникалық қызметке рұқсат (Жалпы практика дәрігері)</div>
-            </div>
-            <div class="badge-box">
-                <div class="badge-title">ҰТБО (НЦНЭ) Емтиханы</div>
-                <div class="badge-desc">Тәуелсіз біліктілік сынағынан өтті</div>
-                <div class="badge-score">Нәтиже: 85.5 балл</div>
-            </div>
-        </div>
-
-        <div class="sidebar-section">
-            <div class="sidebar-title">Медициналық IT & МИС</div>
-            <div class="tag-cloud">
-                <span class="tag">DamuMed</span>
-                <span class="tag">КМИС</span>
-                <span class="tag">ЭЦП жүйесі</span>
-                <span class="tag">MS Office</span>
-            </div>
-        </div>
-
-        <div class="sidebar-section">
-            <div class="sidebar-title">Тілдік дағдылар</div>
-            <div class="lang-list">
-                <div class="lang-row">
-                    <span class="lang-name">Қазақ тілі</span>
-                    <span class="lang-level">C2 (Ана тілі)</span>
-                </div>
-                <div class="lang-row">
-                    <span class="lang-name">Орыс тілі</span>
-                    <span class="lang-level">C1 (Еркін)</span>
-                </div>
-                <div class="lang-row">
-                    <span class="lang-name">Ағылшын тілі</span>
-                    <span class="lang-level">B1 (Орта)</span>
-                </div>
-                <div class="lang-row">
-                    <span class="lang-name">Түрік тілі</span>
-                    <span class="lang-level">A2 (Базалық)</span>
+            <div class="sidebar-section">
+                <div class="sidebar-title">Байланыс мәліметтері</div>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>Түркістан қ., Алмалы к-сі, 126</span>
+                    </div>
+                    <a href="tel:+77075263980" class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>+7 (707) 526-39-80</span>
+                    </a>
+                    <a href="mailto:rbaeshov000@gmail.com" class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span>rbaeshov000@gmail.com</span>
+                    </a>
+                    <div class="contact-item">
+                        <span class="contact-icon">🎂</span>
+                        <span>26.01.2003 ж.т.</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- QR CODE SECTION -->
-        <div class="qr-card">
-            <img class="qr-img" src="qr.png" alt="Онлайн сайт QR коды">
-            <div class="qr-text">📱 Онлайн сайт & WhatsApp</div>
-        </div>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div class="main">
-        <!-- HEADER -->
-        <div class="header">
-            <h1 class="name">Баешов Рахат Тайыпханұлы</h1>
-            <div class="target-role">
-                <span>Жалпы практикалық дәрігер (ВОП / ЖПД)</span>
-                <span class="role-tag">Маман сертификаты бар</span>
-            </div>
-        </div>
-
-        <!-- SUMMARY -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-icon">🩺</div>
-                <div class="section-title">Кәсіби мақсат және түйіндеме</div>
-            </div>
-            <div class="summary-text">
-                Қожа Ахмет Ясауи атындағы ХҚТУ түлегі (5 жыл бакалавриат + 2 жыл интернатура). ҰТБО (НЦНЭ) тәуелсіз емтиханын 85.5 балмен сәтті тапсырып, «Жалпы практика дәрігері» маман сертификатын алған. Түркістан қалалық орталық ауруханасының жансақтау бөлімінде және Шымкент қ. емханаларында клиникалық практикадан өткен. ҚР ДСМ клиникалық хаттамаларына сәйкес сапалы медициналық көмек көрсетуге, шұғыл жағдайларда дер кезінде шешім қабылдауға және МИС жүйелерімен (DamuMed, КМИС) жылдам жұмыс істеуге толық дайын.
-            </div>
-        </div>
-
-        <!-- EDUCATION -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-icon">🎓</div>
-                <div class="section-title">Білімі</div>
-            </div>
-            <div class="timeline-item">
-                <div class="item-head">
-                    <div class="item-title">Қожа Ахмет Ясауи атындағы ХҚТУ</div>
-                    <div class="item-period">2024 – 2026</div>
+            <div class="sidebar-section">
+                <div class="sidebar-title">Сертификат & Бағалау</div>
+                <div class="badge-box">
+                    <div class="badge-title">Маман сертификаты</div>
+                    <div class="badge-desc">Клиникалық қызметке рұқсат (Жалпы практика дәрігері)</div>
                 </div>
-                <div class="item-subtitle">Интернатура: «Жалпы медицина» (Жалпы практикалық дәрігер)</div>
-            </div>
-            <div class="timeline-item">
-                <div class="item-head">
-                    <div class="item-title">Қожа Ахмет Ясауи атындағы ХҚТУ</div>
-                    <div class="item-period">2019 – 2024</div>
+                <div class="badge-box">
+                    <div class="badge-title">ҰТБО (НЦНЭ) Емтиханы</div>
+                    <div class="badge-desc">Тәуелсіз біліктілік сынағынан өтті</div>
+                    <div class="badge-score">Нәтиже: 85.5 балл</div>
                 </div>
-                <div class="item-subtitle">Бакалавриат: «Жалпы медицина» факультеті</div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Медициналық IT & МИС</div>
+                <div class="tag-cloud">
+                    <span class="tag">DamuMed</span>
+                    <span class="tag">КМИС</span>
+                    <span class="tag">ЭЦП жүйесі</span>
+                    <span class="tag">MS Office</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Тілдік дағдылар</div>
+                <div class="lang-list">
+                    <div class="lang-row">
+                        <span class="lang-name">Қазақ тілі</span>
+                        <span class="lang-level">C2 (Ана тілі)</span>
+                    </div>
+                    <div class="lang-row">
+                        <span class="lang-name">Орыс тілі</span>
+                        <span class="lang-level">C1 (Еркін)</span>
+                    </div>
+                    <div class="lang-row">
+                        <span class="lang-name">Ағылшын тілі</span>
+                        <span class="lang-level">B1 (Орта)</span>
+                    </div>
+                    <div class="lang-row">
+                        <span class="lang-name">Түрік тілі</span>
+                        <span class="lang-level">A2 (Базалық)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Жеке қасиеттері</div>
+                <div class="tag-cloud">
+                    <span class="tag">Жоғары жауапкершілік</span>
+                    <span class="tag">Стресске төзімділік</span>
+                    <span class="tag">Шұғыл шешім қабылдау</span>
+                    <span class="tag">Дәрігерлік этика</span>
+                    <span class="tag">Науқаспен тіл табысу</span>
+                </div>
+            </div>
+
+            <!-- QR CODE -->
+            <div class="qr-card">
+                <img class="qr-img" src="qr.png" alt="Онлайн сайт QR коды">
+                <div class="qr-text">📱 Онлайн сайт & WhatsApp</div>
             </div>
         </div>
 
-        <!-- CLINICAL PRACTICE -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-icon">🏥</div>
-                <div class="section-title">Клиникалық тәжірибе және практика</div>
-            </div>
-            <div class="timeline-item">
-                <div class="item-head">
-                    <div class="item-title">Түркістан қалалық орталық ауруханасы</div>
-                    <div class="item-period">Клиникалық база</div>
+        <!-- MAIN CONTENT -->
+        <div class="main">
+            <!-- HEADER -->
+            <div class="header">
+                <h1 class="name">Баешов Рахат Тайыпханұлы</h1>
+                <div class="target-role">
+                    <span>Жалпы практикалық дәрігер (ВОП / ЖПД)</span>
+                    <span class="role-tag">Маман сертификаты бар</span>
                 </div>
-                <div class="item-subtitle">Жансақтау және қарқынды терапия бөлімі (Реанимация) — Дәрігер-интерн</div>
-                <ul class="item-bullets">
-                    <li>Ауыр халдегі науқастардың өмірлік көрсеткіштерін (АҚ, ЧСС, пульсоксиметрия) тұрақты мониторингтеу.</li>
-                    <li>Шұғыл және қарқынды терапия шараларына, инфузиялық терапияға белсенді қатысу.</li>
-                    <li>Перифериялық веналарды катетеризациялау, асқазанды шаю, шұғыл инъекцияларды орындау.</li>
-                </ul>
             </div>
-            <div class="timeline-item">
-                <div class="item-head">
-                    <div class="item-title">Шымкент қалалық №2 және №14 емханалары / ауруханалары</div>
-                    <div class="item-period">Клиникалық база</div>
-                </div>
-                <div class="item-subtitle">МСАК (ПМСП) бөлімі, Терапия және Педиатрия — Дәрігер-интерн</div>
-                <ul class="item-bullets">
-                    <li>ЖПД қабылдауына қатысу: науқастарды алғашқы және қайталама қарап-тексеру, анамнез жинау.</li>
-                    <li>Диагностикалық зерттеулерді тағайындау және ҚР ДСМ хаттамалары бойынша ем сызбаларын талдау.</li>
-                    <li>Диспансерлік есептегі науқастарды бақылау және скринингтік бағдарламаларды жүргізу.</li>
-                    <li>Медициналық құжаттамаларды ДамуМед (DamuMed) және КМИС жүйелерінде қатесіз жүргізу.</li>
-                </ul>
-            </div>
-        </div>
 
-        <!-- PRACTICAL SKILLS -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-icon">⚙️</div>
-                <div class="section-title">Клиникалық дағдылар мен манипуляциялар</div>
+            <!-- SUMMARY -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon">🩺</div>
+                    <div class="section-title">Кәсіби мақсат және түйіндеме</div>
+                </div>
+                <div class="summary-text">
+                    Қожа Ахмет Ясауи атындағы ХҚТУ түлегі (5 жыл бакалавриат + 2 жыл интернатура). ҰТБО (НЦНЭ) тәуелсіз емтиханын 85.5 балмен сәтті тапсырып, «Жалпы практика дәрігері» маман сертификатын алған. Түркістан қалалық орталық ауруханасының жансақтау бөлімінде және Шымкент қ. емханаларында клиникалық практикадан өткен. ҚР ДСМ клиникалық хаттамаларына сәйкес сапалы медициналық көмек көрсетуге, шұғыл жағдайларда дер кезінде шешім қабылдауға және МИС жүйелерімен (DamuMed, КМИС) жылдам жұмыс істеуге толық дайын.
+                </div>
             </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-card-title">🔍 Диагностикалық тексерулер</div>
-                    <ul class="skill-card-list">
-                        <li>Физикалды зерттеу (пальпация, перкуссия, аускультация)</li>
-                        <li>ЭКГ түсіру және негізгі өзгерістерін саралау</li>
-                        <li>Пульсоксиметрия, глюкометрия, АҚ өлшеу</li>
-                        <li>Отоскопия және риноскопия жүргізу</li>
+
+            <!-- EDUCATION -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon">🎓</div>
+                    <div class="section-title">Білімі</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="item-head">
+                        <div class="item-title">Қожа Ахмет Ясауи атындағы ХҚТУ</div>
+                        <div class="item-period">2024 – 2026</div>
+                    </div>
+                    <div class="item-subtitle">Интернатура: «Жалпы медицина» (Жалпы практикалық дәрігер)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="item-head">
+                        <div class="item-title">Қожа Ахмет Ясауи атындағы ХҚТУ</div>
+                        <div class="item-period">2019 – 2024</div>
+                    </div>
+                    <div class="item-subtitle">Бакалавриат: «Жалпы медицина» факультеті</div>
+                </div>
+            </div>
+
+            <!-- CLINICAL PRACTICE -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon">🏥</div>
+                    <div class="section-title">Клиникалық тәжірибе және практика</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="item-head">
+                        <div class="item-title">Түркістан қалалық орталық ауруханасы</div>
+                        <div class="item-period">Клиникалық база</div>
+                    </div>
+                    <div class="item-subtitle">Жансақтау және қарқынды терапия бөлімі (Реанимация) — Дәрігер-интерн</div>
+                    <ul class="item-bullets">
+                        <li>Ауыр халдегі науқастардың өмірлік көрсеткіштерін (АҚ, ЧСС, пульсоксиметрия) тұрақты мониторингтеу.</li>
+                        <li>Шұғыл және қарқынды терапия шараларына, инфузиялық терапияға белсенді қатысу.</li>
+                        <li>Перифериялық веналарды катетеризациялау, асқазанды шаю, шұғыл инъекцияларды орындау.</li>
                     </ul>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-card-title">💉 Емдік манипуляциялар</div>
-                    <ul class="skill-card-list">
-                        <li>К/і, б/е, т/а инъекциялар мен тамшылатқыштар</li>
-                        <li>Перифериялық вена катетерін орнату</li>
-                        <li>Алғашқы хирургиялық өңдеу (АХӨ / ПХО)</li>
-                        <li>Хирургиялық тігіс салу, таңғыштар байлау</li>
+                <div class="timeline-item">
+                    <div class="item-head">
+                        <div class="item-title">Шымкент қалалық №2 және №14 емханалары / ауруханалары</div>
+                        <div class="item-period">Клиникалық база</div>
+                    </div>
+                    <div class="item-subtitle">МСАК (ПМСП) бөлімі, Терапия және Педиатрия — Дәрігер-интерн</div>
+                    <ul class="item-bullets">
+                        <li>ЖПД қабылдауына қатысу: науқастарды алғашқы және қайталама қарап-тексеру, анамнез жинау.</li>
+                        <li>Диагностикалық зерттеулерді тағайындау және ҚР ДСМ хаттамалары бойынша ем сызбаларын талдау.</li>
+                        <li>Диспансерлік есептегі науқастарды бақылау және скринингтік бағдарламаларды жүргізу.</li>
+                        <li>Медициналық құжаттамаларды ДамуМед (DamuMed) және КМИС жүйелерінде қатесіз жүргізу.</li>
                     </ul>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-card-title">🚨 Шұғыл медициналық көмек</div>
-                    <ul class="skill-card-list">
-                        <li>Жүрек-өкпе реанимациясы (БӨР / BLS қағидалары)</li>
-                        <li>Анафилактикалық шокта жедел көмек көрсету</li>
-                        <li>Гипертониялық криз және ЖКС кезіндегі ем</li>
-                        <li>Коллапс, естен тану жағдайларын жою</li>
-                    </ul>
+            </div>
+
+            <!-- PRACTICAL SKILLS -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon">⚙️</div>
+                    <div class="section-title">Клиникалық дағдылар мен манипуляциялар</div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-card-title">📋 Учаскелік қызмет & МСАК</div>
-                    <ul class="skill-card-list">
-                        <li>Ересектер мен балаларға амбулаториялық қарау</li>
-                        <li>Вакцинопрофилактика және егу күнтізбесі</li>
-                        <li>Диспансерлік бақылау және скрининг жүргізу</li>
-                        <li>Еңбекке жарамсыздық парақтарын ресімдеу</li>
-                    </ul>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-card-title">🔍 Диагностикалық тексерулер</div>
+                        <ul class="skill-card-list">
+                            <li>Физикалды зерттеу (пальпация, перкуссия, аускультация)</li>
+                            <li>ЭКГ түсіру және негізгі өзгерістерін саралау</li>
+                            <li>Пульсоксиметрия, глюкометрия, АҚ өлшеу</li>
+                            <li>Отоскопия және риноскопия жүргізу</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card-title">💉 Емдік манипуляциялар</div>
+                        <ul class="skill-card-list">
+                            <li>К/і, б/е, т/а инъекциялар мен тамшылатқыштар</li>
+                            <li>Перифериялық вена катетерін орнату</li>
+                            <li>Алғашқы хирургиялық өңдеу (АХӨ / ПХО)</li>
+                            <li>Хирургиялық тігіс салу, таңғыштар байлау</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card-title">🚨 Шұғыл медициналық көмек</div>
+                        <ul class="skill-card-list">
+                            <li>Жүрек-өкпе реанимациясы (БӨР / BLS қағидалары)</li>
+                            <li>Анафилактикалық шокта жедел көмек көрсету</li>
+                            <li>Гипертониялық криз және ЖКС кезіндегі ем</li>
+                            <li>Коллапс, естен тану жағдайларын жою</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card-title">📋 Учаскелік қызмет & МСАК</div>
+                        <ul class="skill-card-list">
+                            <li>Ересектер мен балаларға амбулаториялық қарау</li>
+                            <li>Вакцинопрофилактика және егу күнтізбесі</li>
+                            <li>Диспансерлік бақылау және скрининг жүргізу</li>
+                            <li>Еңбекке жарамсыздық парақтарын ресімдеу</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
