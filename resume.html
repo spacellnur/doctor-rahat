@@ -24,7 +24,7 @@
             font-family: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
             background-color: #ffffff;
             color: #1e293b;
-            line-height: 1.34;
+            line-height: 1.32;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
@@ -35,7 +35,7 @@
             margin: 0 auto;
             background: #ffffff;
             display: grid;
-            grid-template-columns: 68mm 142mm;
+            grid-template-columns: 70mm 140mm;
             position: relative;
             overflow: hidden;
         }
@@ -44,29 +44,29 @@
         .sidebar {
             background: #0d1e2e;
             color: #e2e8f0;
-            padding: 16px 14px;
+            padding: 15px 14px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 9px;
         }
         .photo-container {
             text-align: center;
         }
         .photo {
-            width: 110px;
-            height: 135px;
+            width: 105px;
+            height: 130px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 8px;
             border: 2px solid #14b8a6;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         .sidebar-section {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 4px;
         }
         .sidebar-title {
-            font-size: 10.5px;
+            font-size: 10px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.8px;
@@ -77,19 +77,19 @@
         .contact-list {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 3.5px;
             font-size: 9.5px;
         }
         .contact-item {
             display: flex;
             align-items: flex-start;
-            gap: 6px;
+            gap: 5px;
             color: #cbd5e1;
             word-break: break-word;
         }
         .contact-icon {
             color: #2dd4bf;
-            font-size: 10.5px;
+            font-size: 10px;
             min-width: 12px;
             padding-top: 1px;
         }
@@ -97,16 +97,16 @@
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(45, 212, 191, 0.25);
             border-radius: 5px;
-            padding: 5px 8px;
+            padding: 4px 7px;
         }
         .badge-title {
-            font-size: 10px;
+            font-size: 9.5px;
             font-weight: 700;
             color: #ffffff;
             margin-bottom: 1px;
         }
         .badge-desc {
-            font-size: 9px;
+            font-size: 8.5px;
             color: #94a3b8;
             line-height: 1.2;
         }
@@ -115,7 +115,7 @@
             background: #0d9488;
             color: #ffffff;
             font-weight: 700;
-            font-size: 9.5px;
+            font-size: 9px;
             padding: 1px 5px;
             border-radius: 3px;
             margin-top: 2px;
@@ -123,8 +123,8 @@
         .lang-list {
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            font-size: 9.5px;
+            gap: 3px;
+            font-size: 9px;
         }
         .lang-row {
             display: flex;
@@ -136,7 +136,7 @@
             color: #f1f5f9;
         }
         .lang-level {
-            font-size: 8.5px;
+            font-size: 8px;
             background: rgba(45, 212, 191, 0.15);
             color: #5eead4;
             padding: 1px 4px;
@@ -146,55 +146,62 @@
         .tag-cloud {
             display: flex;
             flex-wrap: wrap;
-            gap: 3.5px;
+            gap: 3px;
         }
         .tag {
             background: rgba(255, 255, 255, 0.07);
             color: #e2e8f0;
-            font-size: 9px;
-            padding: 2px 5px;
+            font-size: 8.5px;
+            padding: 1.5px 5px;
             border-radius: 3px;
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
-        .qr-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px dashed rgba(45, 212, 191, 0.4);
-            border-radius: 6px;
+
+        /* PROMINENT QR CODE BOX */
+        .qr-box {
+            background: #ffffff;
+            border-radius: 8px;
             padding: 6px;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 3px;
+            gap: 2px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+            border: 2px solid #14b8a6;
         }
-        .qr-img {
-            width: 58px;
-            height: 58px;
-            border-radius: 4px;
-            background: #ffffff;
-            padding: 2px;
+        .qr-box img {
+            width: 70px;
+            height: 70px;
+            display: block;
         }
-        .qr-text {
-            font-size: 8px;
-            color: #5eead4;
-            font-weight: 600;
-            letter-spacing: 0.2px;
+        .qr-box-title {
+            font-size: 8.5px;
+            font-weight: 800;
+            color: #0f2438;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .qr-box-sub {
+            font-size: 7.5px;
+            color: #0d9488;
+            font-weight: 700;
         }
 
         /* MAIN CONTENT */
         .main {
-            padding: 18px 18px 14px 18px;
+            padding: 16px 18px 12px 18px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 9px;
             background: #ffffff;
         }
         .header {
             border-bottom: 1.5px solid #f1f5f9;
-            padding-bottom: 6px;
+            padding-bottom: 5px;
         }
         .name {
-            font-size: 20px;
+            font-size: 19px;
             font-weight: 800;
             color: #0f2438;
             letter-spacing: -0.3px;
@@ -202,19 +209,19 @@
             text-transform: uppercase;
         }
         .target-role {
-            font-size: 12.5px;
+            font-size: 12px;
             font-weight: 700;
             color: #0d9488;
             margin-top: 2px;
             display: flex;
             align-items: center;
-            gap: 7px;
+            gap: 6px;
         }
         .role-tag {
-            font-size: 9px;
+            font-size: 8.5px;
             background: #ccfbf1;
             color: #0f766e;
-            padding: 1px 6px;
+            padding: 1px 5px;
             border-radius: 999px;
             font-weight: 700;
             letter-spacing: 0.2px;
@@ -222,48 +229,48 @@
         .section {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 4px;
         }
         .section-header {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
         }
         .section-icon {
-            width: 17px;
-            height: 17px;
+            width: 16px;
+            height: 16px;
             background: #e6fffa;
             color: #0d9488;
             border-radius: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 9.5px;
+            font-size: 9px;
             font-weight: 800;
         }
         .section-title {
-            font-size: 11px;
+            font-size: 10.5px;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             color: #0f2438;
         }
         .summary-text {
-            font-size: 9.5px;
+            font-size: 9.2px;
             color: #334155;
-            line-height: 1.42;
+            line-height: 1.38;
             background: #f8fafc;
             border-left: 3px solid #0d9488;
-            padding: 5px 9px;
-            border-radius: 0 5px 5px 0;
+            padding: 4px 8px;
+            border-radius: 0 4px 4px 0;
             text-align: justify;
         }
         .timeline-item {
             position: relative;
-            padding-left: 11px;
+            padding-left: 10px;
             border-left: 2px solid #e2e8f0;
             margin-left: 3px;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
         .timeline-item:last-child {
             margin-bottom: 0;
@@ -271,10 +278,10 @@
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -4.5px;
+            left: -4px;
             top: 4px;
-            width: 7px;
-            height: 7px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
             background: #0d9488;
             border: 1.5px solid #ffffff;
@@ -285,27 +292,27 @@
             align-items: baseline;
         }
         .item-title {
-            font-size: 10px;
+            font-size: 9.8px;
             font-weight: 700;
             color: #0f2438;
         }
         .item-period {
-            font-size: 9px;
+            font-size: 8.5px;
             color: #64748b;
             font-weight: 600;
         }
         .item-subtitle {
-            font-size: 9.5px;
+            font-size: 9.2px;
             color: #0d9488;
             font-weight: 600;
             margin-top: 1px;
         }
         .item-bullets {
             margin-top: 2px;
-            padding-left: 11px;
-            font-size: 9px;
+            padding-left: 10px;
+            font-size: 8.8px;
             color: #475569;
-            line-height: 1.38;
+            line-height: 1.35;
         }
         .item-bullets li {
             margin-bottom: 1px;
@@ -313,16 +320,16 @@
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5px;
+            gap: 4px;
         }
         .skill-card {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            border-radius: 5px;
-            padding: 5px 7px;
+            border-radius: 4px;
+            padding: 4px 6px;
         }
         .skill-card-title {
-            font-size: 9.5px;
+            font-size: 9px;
             font-weight: 700;
             color: #0f766e;
             margin-bottom: 2px;
@@ -332,13 +339,13 @@
         }
         .skill-card-list {
             list-style: none;
-            font-size: 8.5px;
+            font-size: 8.2px;
             color: #334155;
-            line-height: 1.32;
+            line-height: 1.3;
         }
         .skill-card-list li {
             position: relative;
-            padding-left: 7px;
+            padding-left: 6px;
             margin-bottom: 1px;
         }
         .skill-card-list li::before {
@@ -426,10 +433,11 @@
             </div>
         </div>
 
-        <!-- QR CODE SECTION -->
-        <div class="qr-card">
-            <img class="qr-img" src="qr.png" alt="Онлайн сайт QR коды">
-            <div class="qr-text">📱 Онлайн сайт & WhatsApp</div>
+        <!-- PROMINENT QR CODE BOX -->
+        <div class="qr-box">
+            <img src="qr.png" alt="Онлайн сайт QR коды">
+            <div class="qr-box-title">Онлайн Резюме</div>
+            <div class="qr-box-sub">Сайт & WhatsApp-қа өту</div>
         </div>
     </div>
 
