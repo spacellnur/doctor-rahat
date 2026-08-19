@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Түйіндеме (Ақ-қара баспалық) - Баешов Рахат Тайыпханұлы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        @page { size: A4 portrait; margin: 0; }
+        html, body {
+            height: 297mm; max-height: 297mm; overflow: hidden;
+            font-family: 'Roboto', 'Inter', Arial, sans-serif;
+            background-color: #ffffff; color: #000000; line-height: 1.34;
+            -webkit-print-color-adjust: exact; print-color-adjust: exact;
+        }
+        .page {
+            width: 210mm; height: 297mm; max-height: 297mm; margin: 0 auto;
+            background: #ffffff; display: grid; grid-template-columns: 68mm 142mm;
+            position: relative; overflow: hidden;
+        }
+        .sidebar {
+            background: #ffffff; border-right: 1.5px solid #000000;
+            color: #000000; padding: 18px 15px; display: flex; flex-direction: column; gap: 11px;
+        }
+        .photo-container { text-align: center; }
+        .photo {
+            width: 110px; height: 135px; object-fit: cover;
+            border-radius: 6px; border: 2px solid #000000;
+        }
+        .sidebar-section { display: flex; flex-direction: column; gap: 5px; }
+        .sidebar-title {
+            font-size: 10px; font-weight: 800; text-transform: uppercase;
+            letter-spacing: 0.6px; color: #000000; border-bottom: 1.5px solid #000000;
+            padding-bottom: 2px;
+        }
+        .contact-list { display: flex; flex-direction: column; gap: 4px; font-size: 9.5px; }
+        .contact-item { display: flex; align-items: flex-start; gap: 6px; color: #111111; word-break: break-word; }
+        .badge-box {
+            background: #f8fafc; border: 1px solid #000000;
+            border-radius: 4px; padding: 5px 7px;
+        }
+        .badge-title { font-size: 9.5px; font-weight: 700; color: #000000; margin-bottom: 1px; }
+        .badge-desc { font-size: 8.5px; color: #444444; line-height: 1.2; }
+        .badge-score {
+            display: inline-block; background: #000000; color: #ffffff;
+            font-weight: 700; font-size: 9px; padding: 1px 5px; border-radius: 3px; margin-top: 2px;
+        }
+        .lang-list { display: flex; flex-direction: column; gap: 4px; font-size: 9.5px; }
+        .lang-row { display: flex; justify-content: space-between; align-items: center; }
+        .lang-name { font-weight: 700; color: #000000; }
+        .lang-level { font-size: 8.5px; border: 1px solid #000000; color: #000000; padding: 1px 4px; border-radius: 3px; font-weight: 700; }
+        .qr-card {
+            background: #ffffff; border: 1.5px solid #000000; border-radius: 6px;
+            padding: 6px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 3px;
+        }
+        .qr-img { width: 55px; height: 55px; display: block; }
+        .qr-text { font-size: 8px; color: #000000; font-weight: 800; letter-spacing: 0.2px; }
+
+        /* MAIN CONTENT */
+        .main { padding: 20px 18px 16px 20px; display: flex; flex-direction: column; gap: 11px; background: #ffffff; }
+        .header { border-bottom: 2px solid #000000; padding-bottom: 6px; }
+        .name { font-size: 20px; font-weight: 900; color: #000000; letter-spacing: -0.3px; line-height: 1.15; text-transform: uppercase; }
+        .target-role { font-size: 12.5px; font-weight: 800; color: #000000; margin-top: 2px; display: flex; align-items: center; gap: 7px; }
+        .role-tag { font-size: 9px; border: 1px solid #000000; color: #000000; padding: 1px 6px; border-radius: 999px; font-weight: 700; }
+        .section { display: flex; flex-direction: column; gap: 5px; }
+        .section-title { font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; color: #000000; border-bottom: 1px solid #000000; padding-bottom: 2px; }
+        .summary-text {
+            font-size: 9.5px; color: #111111; line-height: 1.45;
+            background: #ffffff; border-left: 3px solid #000000; padding: 5px 9px; text-align: justify;
+        }
+        .timeline-item { position: relative; padding-left: 11px; border-left: 2px solid #000000; margin-left: 3px; margin-bottom: 6px; }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .item-head { display: flex; justify-content: space-between; align-items: baseline; }
+        .item-title { font-size: 10px; font-weight: 800; color: #000000; }
+        .item-period { font-size: 9px; color: #333333; font-weight: 700; }
+        .item-subtitle { font-size: 9.5px; color: #000000; font-weight: 700; margin-top: 1px; }
+        .item-bullets { margin-top: 2px; padding-left: 11px; font-size: 9px; color: #222222; line-height: 1.38; }
+        .item-bullets li { margin-bottom: 1px; }
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+        .skill-card { background: #ffffff; border: 1px solid #000000; border-radius: 4px; padding: 5px 7px; }
+        .skill-card-title { font-size: 9.5px; font-weight: 800; color: #000000; margin-bottom: 2px; }
+        .skill-card-list { list-style: none; font-size: 8.5px; color: #111111; line-height: 1.32; }
+        .skill-card-list li { position: relative; padding-left: 7px; margin-bottom: 1px; }
+        .skill-card-list li::before { content: '•'; position: absolute; left: 0; color: #000000; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+        <div class="photo-container">
+            <img class="photo" src="photo.png" alt="Баешов Рахат">
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Байланыс мәліметтері</div>
+            <div class="contact-list">
+                <div class="contact-item"><span>📍 Түркістан қ., Алмалы к-сі, 126</span></div>
+                <div class="contact-item"><span>📞 +7 (707) 526-39-80</span></div>
+                <div class="contact-item"><span>✉️ rbaeshov000@gmail.com</span></div>
+                <div class="contact-item"><span>🎂 26.01.2003 ж.т.</span></div>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Сертификат & Бағалау</div>
+            <div class="badge-box">
+                <div class="badge-title">• Маман сертификаты (ЖПД)</div>
+                <div class="badge-desc">Клиникалық қызметке рұқсат</div>
+            </div>
+            <div class="badge-box">
+                <div class="badge-title">• ҰТБО (НЦНЭ): 85.5 балл</div>
+                <div class="badge-desc">Тәуелсіз сынақтан өтті</div>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Медициналық IT & МИС</div>
+            <div class="contact-list">
+                <div class="contact-item">• DamuMed (Дамумед)</div>
+                <div class="contact-item">• КМИС жүйесі</div>
+                <div class="contact-item">• ЭЦП жүйесі, MS Office</div>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Тілдік дағдылар</div>
+            <div class="lang-list">
+                <div class="lang-row"><span class="lang-name">Қазақ тілі</span><span class="lang-level">C2 (Ана тілі)</span></div>
+                <div class="lang-row"><span class="lang-name">Орыс тілі</span><span class="lang-level">C1 (Еркін)</span></div>
+                <div class="lang-row"><span class="lang-name">Ағылшын тілі</span><span class="lang-level">B1 (Орта)</span></div>
+                <div class="lang-row"><span class="lang-name">Түрік тілі</span><span class="lang-level">A2 (Базалық)</span></div>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Жеке қасиеттері</div>
+            <div class="contact-list">
+                <div class="contact-item">• Жоғары жауапкершілік</div>
+                <div class="contact-item">• Стресске төзімділік</div>
+                <div class="contact-item">• Дәрігерлік этика</div>
+            </div>
+        </div>
+
+        <!-- QR CODE -->
+        <div class="qr-card">
+            <img class="qr-img" src="qr.png" alt="Онлайн сайт QR коды">
+            <div class="qr-text">Онлайн Резюме (Сайт & WhatsApp)</div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+        <!-- HEADER -->
+        <div class="header">
+            <h1 class="name">Баешов Рахат Тайыпханұлы</h1>
+            <div class="target-role">
+                <span>Жалпы практикалық дәрігер (ВОП / ЖПД)</span>
+                <span class="role-tag">Маман сертификаты бар</span>
+            </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="section">
+            <div class="section-title">🩺 Кәсіби мақсат және түйіндеме</div>
+            <div class="summary-text">
+                Қожа Ахмет Ясауи атындағы ХҚТУ түлегі (5 жыл бакалавриат + 2 жыл интернатура). ҰТБО (НЦНЭ) тәуелсіз емтиханын 85.5 балмен сәтті тапсырып, «Жалпы практика дәрігері» маман сертификатын алған. Түркістан қалалық орталық ауруханасының жансақтау бөлімінде және Шымкент қ. емханаларында клиникалық практикадан өткен. ҚР ДСМ клиникалық хаттамаларына сәйкес сапалы медициналық көмек көрсетуге, шұғыл жағдайларда дер кезінде шешім қабылдауға және МИС жүйелерімен (DamuMed, КМИС) жылдам жұмыс істеуге толық дайын.
+            </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="section">
+            <div class="section-title">🎓 Білімі</div>
+            <div class="timeline-item">
+                <div class="item-head">
+                    <div class="item-title">Қожа Ахмет Ясауи атындағы ХҚТУ</div>
+                    <div class="item-period">2024 – 2026</div>
+                </div>
+                <div class="item-subtitle">Интернатура: «Жалпы медицина» (Жалпы практикалық дәрігер)</div>
+            </div>
+            <div class="timeline-item">
+                <div class="item-head">
+                    <div class="item-title">Қожа Ахмет Ясауи атындағы ХҚТУ</div>
+                    <div class="item-period">2019 – 2024</div>
+                </div>
+                <div class="item-subtitle">Бакалавриат: «Жалпы медицина» факультеті</div>
+            </div>
+        </div>
+
+        <!-- CLINICAL PRACTICE -->
+        <div class="section">
+            <div class="section-title">🏥 Клиникалық тәжірибе және практика</div>
+            <div class="timeline-item">
+                <div class="item-head">
+                    <div class="item-title">Түркістан қалалық орталық ауруханасы</div>
+                    <div class="item-period">Клиникалық база</div>
+                </div>
+                <div class="item-subtitle">Жансақтау және қарқынды терапия бөлімі (Реанимация) — Дәрігер-интерн</div>
+                <ul class="item-bullets">
+                    <li>Ауыр халдегі науқастардың өмірлік көрсеткіштерін (АҚ, ЧСС, SpO2) тұрақты мониторингтеу.</li>
+                    <li>Шұғыл және қарқынды терапия шараларына, инфузиялық терапияға белсенді қатысу.</li>
+                    <li>Перифериялық веналарды катетеризациялау, асқазанды шаю, шұғыл инъекцияларды орындау.</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <div class="item-head">
+                    <div class="item-title">Шымкент қалалық №2 және №14 емханалары / ауруханалары</div>
+                    <div class="item-period">Клиникалық база</div>
+                </div>
+                <div class="item-subtitle">МСАК (ПМСП) бөлімі, Терапия және Педиатрия — Дәрігер-интерн</div>
+                <ul class="item-bullets">
+                    <li>ЖПД қабылдауы: алғашқы және қайталама қарап-тексеру, анамнез жинау.</li>
+                    <li>Диагностикалық зерттеулерді тағайындау, ҚР ДСМ хаттамалары бойынша ем сызбаларын талдау.</li>
+                    <li>Диспансерлік есептегі науқастарды бақылау, скринингтік бағдарламаларды жүргізу.</li>
+                    <li>Медициналық құжаттамаларды ДамуМед (DamuMed) және КМИС жүйелерінде қатесіз жүргізу.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PRACTICAL SKILLS -->
+        <div class="section">
+            <div class="section-title">⚙️ Клиникалық дағдылар мен манипуляциялар</div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-card-title">🔍 Диагностикалық тексерулер</div>
+                    <ul class="skill-card-list">
+                        <li>Физикалды зерттеу (пальпация, перкуссия, аускультация)</li>
+                        <li>ЭКГ түсіру және негізгі өзгерістерін саралау</li>
+                        <li>Пульсоксиметрия, глюкометрия, АҚ өлшеу, отоскопия</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-title">💉 Емдік манипуляциялар</div>
+                    <ul class="skill-card-list">
+                        <li>К/і, б/е, т/а инъекциялар мен тамшылатқыштар</li>
+                        <li>Перифериялық вена катетерін орнату</li>
+                        <li>Алғашқы хирургиялық өңдеу (АХӨ / ПХО), тігіс салу</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-title">🚨 Шұғыл медициналық көмек</div>
+                    <ul class="skill-card-list">
+                        <li>Жүрек-өкпе реанимациясы (БӨР / BLS қағидалары)</li>
+                        <li>Анафилактикалық шокта жедел көмек көрсету</li>
+                        <li>Гипертониялық криз және ЖКС кезіндегі ем</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-title">📋 Учаскелік қызмет & МСАК</div>
+                    <ul class="skill-card-list">
+                        <li>Ересектер мен балаларға амбулаториялық қарау</li>
+                        <li>Вакцинопрофилактика және егу күнтізбесі</li>
+                        <li>Диспансерлік бақылау және скрининг жүргізу</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
